@@ -1,7 +1,5 @@
 /// @description card definitions
 
-localSortControl = false;
-
 //Manipulação do texto na interface
 #region
 	nodeCard = layer_get_flexpanel_node("CardsMenu");
@@ -24,7 +22,13 @@ localSortControl = false;
 
 //cria as propriedades das cartas
 #region
-cartas = [
+carta = {
+		id: -1,
+		name: "Null",
+		sprite: spr_blankCard,
+		description: "Null"
+	};
+global.cartas = [
 	{	
 		id: 0,
 		name: "BOLHAS!!!",
@@ -63,14 +67,23 @@ cartas = [
 	}
 ];
 #endregion
+//inst_3ED45EE9
+//inst_7F7FA42D
+//inst_6E657D5E
 
-//gera uma carta para o objeto na rodada onde foi criado
-//#region
-//	cardSort = function() 
-//	{
-//		var sort = irandom_range(0,5);
-//		show_debug_message("SORT CARD: "+ string(sort));
-//		carta = cartas[sort];
-//		sprite_index = cartas[sort].sprite;
-//	}
-//#endregion
+// gera uma carta para o objeto na rodada onde foi criado
+#region
+	cardSort = function() 
+	{
+		with(obj_cardButton)
+		{
+			var sort = irandom_range(0,5);
+			carta = global.cartas[sort];
+			sprite_index = global.cartas[sort].sprite;
+			
+			show_debug_message("######### CHEGOU AQUI ######## "+string(sort));
+		}		
+	}
+#endregion
+
+cardSort();

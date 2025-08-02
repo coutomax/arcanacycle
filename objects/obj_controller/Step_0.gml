@@ -5,16 +5,17 @@
 	if global.enemiesAlive == 0 && !global.endPhase
 	{
 		global.endPhase = true; // alterar estado ao começar outra fase
+		global.cardSortControl = true;
 		nextPhase.start();
 	}
 	
 	if global.endPhase && nextPhase.is_done()
-	{
-		global.paused = true;
-		
-		if !global.isSorting { global.isSorting = true; }
-		
-		obj_menuManager.updateCardsMenu();
+	{					
+		if !global.cardSortControl
+		{
+			global.paused = true;
+			obj_menuManager.updateCardsMenu();
+		}
 	}
 	
 nextPhase.update();

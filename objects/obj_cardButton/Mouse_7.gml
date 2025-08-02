@@ -25,5 +25,4 @@
 	}
 	
 	//reseta a fase
-	localSortControl = false;
 	resetPhase();

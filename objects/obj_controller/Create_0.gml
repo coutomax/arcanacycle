@@ -4,18 +4,17 @@ randomize();
 
 layer_set_visible("CardsMenu", false);
 
-//variáveis globais de controle
-	global.isSorting = false;
-
 //global timers
 spawnTimer = timer( 2 );
 spawnTimer.start();
 
 nextPhase = timer ( 3 );
 
+//Controle de geração de cartas: somente 1x por fase
+global.cardSortControl = true;
+
 //variáveis globais
 #region
-
 	//lista de buffs
 	global.bubbles = false;
 	global.portals = false;
@@ -58,7 +57,7 @@ nextPhase = timer ( 3 );
 	global.dmgMultiplicador = 1.0;
 	global.expMultiplicador = 1.0;
 
-	global.atkSpeed = .5;
+	global.atkSpeed = .35;
 	global.spdProjetilMultiplicador = 1.0;
 
 	//dados da fase
@@ -74,15 +73,4 @@ nextPhase = timer ( 3 );
 	
 	//game status
 	global.paused = false;	
-#endregion
-
-//gera uma carta para o objeto na rodada onde foi criado
-#region
-	cardSort = function() 
-	{
-		var sort = irandom_range(0,5);
-		
-		carta = cartas[sort];
-		sprite_index = cartas[sort].sprite;
-	}
 #endregion
