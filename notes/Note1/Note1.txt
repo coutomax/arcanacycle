@@ -1,5 +1,8 @@
 + Fazer melhorias no ajuste de texto do CardPanel - OK
 +
++ Ajustar a linha 14 no step do obj_controller para evitar flick das cartas ao gerar.
++ Buscar gerar a carta e chamar a tela de seleção somente depois.
++
 + As cartas não estão sendo geradas de forma aleatória. 
 + Verificar o que está causando isso. - AGUARDANDO
 +
