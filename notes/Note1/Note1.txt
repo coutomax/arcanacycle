@@ -1,0 +1,31 @@
++ Fazer melhorias no ajuste de texto do CardPanel - OK
++
++ As cartas não estão sendo geradas de forma aleatória. 
++ Verificar o que está causando isso. - AGUARDANDO
++
++ Limitar as cartas para não se repetirem - AGUARDANDO
++
++ Ajustar qual inimigo nasce e em qual estágio isso ocorre - AGUARDANDO
++
++ Resolver problema com o Menu de pausa ao reiniciar o jogo - AGUARDANDO UPDATE / TESTAR DEPTH
++
++ Colocar uma espécie de brilho ou destaque para itens dropados - AGUARDANDO
++
++ Ajustar o controle de inimigos por estágio - AGUARDANDO
++
++ Ajustar a quantidade de inimigos por fase - AGUARDANDO
++
++ Melhorar o alinhamento dos textos na escolha das cartas - OK
++
++ Ajustar a luz do mago quando ele vira para a esquerda - OK
++
++ Ajustar a destruição dos projéteis ao sair da tela e ao bater no chão. - OK
++
++ Ajustar o dano dos inimigos, pois o timer está global para todos - OK
++
++ Ajustar a cura, quando pega o coração, está passando a vidaMaxima. - OK
++
++ Ajustar as cartas para aumentar e manter o padding 
++ igual no flexpanel, pois está ficando mais próximo 
++ da direita e a esquerda mantém o padding. - OK
++

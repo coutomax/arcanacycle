@@ -1,0 +1,13 @@
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function resetPhase(){
+	global.stage++;
+	global.totalEnemies = 0;
+	global.enemiesAlive = (global.enemiesByStage + global.stage)
+	global.enemiesByStage = global.enemiesAlive;// começa com 7
+	global.endPhase = !global.endPhase;
+	global.paused = !global.paused
+	global.isSorting = false;
+	
+	obj_menuManager.updateCardsMenu();
+}

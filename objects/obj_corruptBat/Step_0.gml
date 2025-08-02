@@ -1,0 +1,87 @@
+/// @description 
+
+if global.paused exit;
+
+//causa dano
+#region
+	damageColision(self, obj_mago) 	
+#endregion
+
+//morrer
+#region
+
+	if !vivo
+	{
+		sprite_index = spr_corruptBat_dead;
+        xspd = 0;
+		y += yspd;
+        yspd += global.gravidade;	
+		image_angle = 0;
+	}
+
+    if vida <= 0 && vivo
+    {
+		global.experience += experiencia;
+		global.enemiesAlive--;
+		global.enemiesKilled++;
+		vivo = false;
+		
+		attackCooldown.reset();
+		
+		//rola a chance de drop
+		var sorte = global.luck;
+		
+		for(var i = 0; i < array_length(drops); i++)
+		{
+			
+			var drop = drops[i];
+			
+			var finalChance = drop.chance + sorte;
+			
+			if random(100) < finalChance
+			{
+				var dx = x + irandom_range(-8, 8);
+				var dy = y + irandom_range(-8, 8);
+				
+				instance_create_layer(dx, dy, "Instances", drop.obj);
+			}
+			
+		}
+    }
+#endregion
+
+//colisoes
+#region
+	groundColision(self, obj_chao);
+#endregion
+
+//segue o personagem
+#region
+	xTarget = obj_mago.x;
+	yTarget = obj_mago.y;
+
+	if vida > 0 
+	{
+		var dir = point_direction(x, y, xTarget, yTarget);
+
+		mp_potential_step(xTarget, yTarget, totalSpeed, false);
+
+		image_angle = dir - 270;
+	}
+#endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
