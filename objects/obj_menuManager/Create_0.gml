@@ -1,8 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//function card-select
-#region
+#region function card-select
 	updateCardsMenu = function ()
 	{
 		layer_set_visible("CardsMenu", global.endPhase);
@@ -10,8 +9,7 @@
 	}
 #endregion
 
-//function pause
-#region
+#region function pause
 	updatePause = function ()
 	{	
 		layer_set_visible("PauseLayer", global.paused);

@@ -1,7 +1,6 @@
 /// @description card definitions
 
-//Manipulação do texto na interface
-#region
+#region Manipulação do texto na interface
 	nodeCard = layer_get_flexpanel_node("CardsMenu");
 	childCard = flexpanel_node_get_child(nodeCard, "CardPlace_" + string(idCardButton));
 
@@ -27,8 +26,7 @@ carta = {
 	description: "Null"
 };
 	
-// gera uma carta para o objeto na rodada onde foi criado
-#region
+#region gera uma carta para o objeto na rodada onde foi criado
 	cardSort = function() 
 	{
 		with(obj_cardButton)

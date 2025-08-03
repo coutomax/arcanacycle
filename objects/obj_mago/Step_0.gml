@@ -24,8 +24,7 @@ if global.paused
 	exit
 }
 
-//morrer
-#region
+#region morrer
 	if global.vida <= 0
 	{
 		global.vida = 0;
@@ -34,8 +33,7 @@ if global.paused
 	}
 #endregion
 
-//ataque
-#region
+#region ataque
 	if mouseClick && attackCooldown.is_done()
 	{
 		
@@ -56,8 +54,7 @@ if global.paused
 	attackCooldown.update();
 #endregion
 
-//pulo
-#region
+#region pulo
 	if place_meeting(x, y + 1, obj_chao) || place_meeting(x, y + 1, obj_plataforma) 
 	
 	{
@@ -91,8 +88,7 @@ if global.paused
 	if yspd > global.maxGravidade { yspd = global.maxGravidade; }
 #endregion
 
-//colisions
-#region
+#region colisões
 	// x colision - parede
 	if place_meeting(x + xspd, y, obj_parede)
 	{
@@ -112,8 +108,7 @@ if global.paused
 	platformColision(self, obj_plataforma)
 #endregion
 
-// Movimento Geral
-#region
+#region Movimento Geral
 	if (keyboard_check_pressed(ord("A"))) {
 		obj_mago.sprite_index = spr_magoAndandoEsq;
 	}
@@ -148,9 +143,8 @@ if global.paused
 		yspd = 2;
 	}
 #endregion
-
-// Aplicar velocidade
-#region
+ 
+#region Aplicar velocidade
 	x += xspd;
 	y += yspd;
 #endregion

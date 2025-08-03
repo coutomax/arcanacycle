@@ -2,13 +2,11 @@
 
 if global.paused exit;
 
-//causa dano
-#region
+#region causa dano
 	damageColision(self, obj_mago) 	
 #endregion
 
-//morrer
-#region
+#region morrer
 
 	if !vivo
 	{
@@ -50,13 +48,11 @@ if global.paused exit;
     }
 #endregion
 
-//colisoes
-#region
+#region colisoes
 	groundColision(self, obj_chao);
 #endregion
 
-//segue o personagem
-#region
+#region segue o personagem
 	xTarget = obj_mago.x;
 	yTarget = obj_mago.y;
 

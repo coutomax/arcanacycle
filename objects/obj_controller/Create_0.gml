@@ -10,14 +10,16 @@ spawnTimer.start();
 
 nextPhase = timer ( 3 );
 
+//debugger
+debugger = false;
+
 //Controle de geração de cartas: somente 1x por fase
 global.cardSortControl = false;
 global.sortCount = 0;
 
 instance_activate_object(obj_cardButton);
 
-//cria as propriedades das cartas
-#region
+#region cria as propriedades das cartas
 global.cartas = [
 	{	
 		id: 0,
@@ -57,8 +59,8 @@ global.cartas = [
 	}
 ];
 #endregion
-//variáveis globais
-#region
+
+#region variáveis globais
 	//lista de buffs
 	global.bubbles = false;
 	global.portals = false;

@@ -1,7 +1,13 @@
 /// @description Controlador de eventos
 
-//phase controller
-#region
+#region ativa/desativa debugger
+if keyboard_check_released( ord("P") )
+{
+	debugger = !debugger;
+}
+#endregion
+
+#region phase controller
 	if global.enemiesAlive == 0 && !global.endPhase
 	{
 		global.endPhase = true; // alterar estado ao começar outra fase
@@ -19,15 +25,13 @@
 			{
 				obj_menuManager.updateCardsMenu();
 			}
-			
 		}
 	}
 	
-nextPhase.update();
+	nextPhase.update();
 #endregion
 
-//spawn enemies
-#region
+#region spawna os inimigos
 	if global.totalEnemies < global.enemiesByStage && !global.paused
 	{
 		if spawnTimer.is_done() 

@@ -1,11 +1,3 @@
-+ Fazer melhorias no ajuste de texto do CardPanel - OK
-+
-+ Ajustar a linha 14 no step do obj_controller para evitar flick das cartas ao gerar.
-+ Buscar gerar a carta e chamar a tela de seleção somente depois.
-+
-+ As cartas não estão sendo geradas de forma aleatória. 
-+ Verificar o que está causando isso. - AGUARDANDO
-+
 + Limitar as cartas para não se repetirem - AGUARDANDO
 +
 + Ajustar qual inimigo nasce e em qual estágio isso ocorre - AGUARDANDO
@@ -17,6 +9,14 @@
 + Ajustar o controle de inimigos por estágio - AGUARDANDO
 +
 + Ajustar a quantidade de inimigos por fase - AGUARDANDO
++
++ Fazer melhorias no ajuste de texto do CardPanel - OK
++
++ Ajustar a linha 14 no step do obj_controller para evitar flick das cartas ao gerar.
++ Buscar gerar a carta e chamar a tela de seleção somente depois. - OK
++
++ As cartas não estão sendo geradas de forma aleatória. 
++ Verificar o que está causando isso. - OK
 +
 + Melhorar o alinhamento dos textos na escolha das cartas - OK
 +
