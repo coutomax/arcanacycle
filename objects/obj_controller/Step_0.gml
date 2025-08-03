@@ -11,7 +11,7 @@
 	
 	if global.endPhase && nextPhase.is_done()
 	{					
-		if !global.cardSortControl
+		if global.cardSortControl
 		{
 			global.paused = true;
 			obj_menuManager.updateCardsMenu();

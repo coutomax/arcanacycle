@@ -11,7 +11,7 @@ spawnTimer.start();
 nextPhase = timer ( 3 );
 
 //Controle de geração de cartas: somente 1x por fase
-global.cardSortControl = true;
+global.cardSortControl = false;
 
 //variáveis globais
 #region
