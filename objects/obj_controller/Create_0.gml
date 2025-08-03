@@ -12,7 +12,51 @@ nextPhase = timer ( 3 );
 
 //Controle de geração de cartas: somente 1x por fase
 global.cardSortControl = false;
+global.sortCount = 0;
 
+instance_activate_object(obj_cardButton);
+
+//cria as propriedades das cartas
+#region
+global.cartas = [
+	{	
+		id: 0,
+		name: "BOLHAS!!!",
+		sprite: spr_cardBubble_0,
+		description: "Seus feitiços viram bolhas!"
+	},
+	{
+		id: 1,
+		name: "Fragmentado",
+		sprite: spr_cardDebris_1,
+		description: "Inimigos criam destroços\nao morrer."
+	},
+	{
+		id: 2,
+		name: "Saúde é tudo",
+		sprite: spr_cardLife_2,
+		description: "+20% da vida máxima."
+	},
+	{
+		id: 3,
+		name: "Chamou um Uber?",
+		sprite: spr_cardPortals_3,
+		description: "Portais se abrem a cada\noito segundos."
+	},
+	{
+		id: 4,
+		name: "2 coelhos,\n1 caixa d'água",
+		sprite: spr_cardProjectiles_4,
+		description: "Dispara mais um feitiço."
+	},
+	{
+		id: 5,
+		name: "Na mira!",
+		sprite: spr_cardScope_5,
+		description: "Feitiços seguirão os alvos."
+	}
+];
+#endregion
 //variáveis globais
 #region
 	//lista de buffs

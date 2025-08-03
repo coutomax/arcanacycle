@@ -8,6 +8,7 @@ function resetPhase(){
 	global.endPhase = !global.endPhase;
 	global.paused = !global.paused
 	global.cardSortControl = false;
+	global.sortCount = 0;
 	
 	obj_menuManager.updateCardsMenu();
 }

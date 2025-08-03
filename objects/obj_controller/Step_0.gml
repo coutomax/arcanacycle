@@ -10,11 +10,16 @@
 	}
 	
 	if global.endPhase && nextPhase.is_done()
-	{					
+	{				
 		if global.cardSortControl
 		{
 			global.paused = true;
-			obj_menuManager.updateCardsMenu();
+			
+			if global.sortCount == 3 
+			{
+				obj_menuManager.updateCardsMenu();
+			}
+			
 		}
 	}
 	
@@ -41,7 +46,6 @@ nextPhase.update();
 	
 	spawnTimer.update();
 #endregion
-
 
 
 

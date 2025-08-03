@@ -101,7 +101,6 @@ if global.paused
 		{
 			x += _pixelCheck;
 		}
-		show_debug_message("colidiu na parede"+ string(x));
 		xColision = _pixelCheck;
 		xspd = 0;
 	}

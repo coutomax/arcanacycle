@@ -20,57 +20,13 @@
 	textElementIdName = textStructureName.layerElements[0].elementId;	
 #endregion
 
-//cria as propriedades das cartas
-#region
 carta = {
-		id: -1,
-		name: "Null",
-		sprite: spr_blankCard,
-		description: "Null"
-	};
-global.cartas = [
-	{	
-		id: 0,
-		name: "BOLHAS!!!",
-		sprite: spr_cardBubble_0,
-		description: "Seus feitiços viram bolhas!"
-	},
-	{
-		id: 1,
-		name: "Fragmentado",
-		sprite: spr_cardDebris_1,
-		description: "Inimigos criam destroços\nao morrer."
-	},
-	{
-		id: 2,
-		name: "Saúde é tudo",
-		sprite: spr_cardLife_2,
-		description: "+20% da vida máxima."
-	},
-	{
-		id: 3,
-		name: "Chamou um Uber?",
-		sprite: spr_cardPortals_3,
-		description: "Portais se abrem a cada\noito segundos."
-	},
-	{
-		id: 4,
-		name: "2 coelhos,\n1 caixa d'água",
-		sprite: spr_cardProjectiles_4,
-		description: "Dispara mais um feitiço."
-	},
-	{
-		id: 5,
-		name: "Na mira!",
-		sprite: spr_cardScope_5,
-		description: "Feitiços seguirão os alvos."
-	}
-];
-#endregion
-//inst_3ED45EE9
-//inst_7F7FA42D
-//inst_6E657D5E
-
+	id: -1,
+	name: "Null",
+	sprite: spr_blankCard,
+	description: "Null"
+};
+	
 // gera uma carta para o objeto na rodada onde foi criado
 #region
 	cardSort = function() 
@@ -80,10 +36,6 @@ global.cartas = [
 			var sort = irandom_range(0,5);
 			carta = global.cartas[sort];
 			sprite_index = global.cartas[sort].sprite;
-			
-			show_debug_message("######### CHEGOU AQUI ######## "+string(sort));
 		}		
 	}
 #endregion
-
-cardSort();
