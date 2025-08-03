@@ -5,7 +5,7 @@ randomize();
 layer_set_visible("CardsMenu", false);
 
 //global timers
-spawnTimer = timer( 2 );
+spawnTimer = timer( 1 );
 spawnTimer.start();
 
 nextPhase = timer ( 3 );
@@ -15,6 +15,7 @@ debugger = false;
 
 //Controle de geração de cartas: somente 1x por fase
 global.cardSortControl = false;
+global.isShowingCards = false;
 global.sortCount = 0;
 
 instance_activate_object(obj_cardButton);

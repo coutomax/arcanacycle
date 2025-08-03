@@ -5,6 +5,7 @@
 	updateCardsMenu = function ()
 	{
 		layer_set_visible("CardsMenu", global.endPhase);
+		global.isShowingCards = global.endPhase;
 		if !global.endPhase { instance_activate_object(obj_cardButton); }
 	}
 #endregion

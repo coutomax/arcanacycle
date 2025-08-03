@@ -35,6 +35,15 @@ draw_text(bar_x + (barWidth / 2), 15 + (barHeigth / 2), string(global.vida) + "/
 #region mostra o debugger
 if debugger
 {
-	draw_text(100, 45, "global.enemiesAlive: "+ string(global.enemiesAlive));
+	draw_text(100, 45, "global.enemiesByStage: "+ string(global.enemiesByStage));
+	draw_text(100, 65, "global.totalEnemies: "+ string(global.totalEnemies));
+	draw_text(100, 85, "global.enemiesAlive: "+ string(global.enemiesAlive));
+	draw_text(100, 105, "global.sortCount: "+ string(global.sortCount));
+	draw_text(100, 125, "global.endPhase: "+ string(global.endPhase));
+	draw_text(100, 145, "global.paused: "+ string(global.paused));
+	draw_text(100, 165, "global.isShowingCards: "+ string(global.isShowingCards));
+	
+	
+	
 }
 #endregion

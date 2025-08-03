@@ -5,9 +5,10 @@ function resetPhase(){
 	global.totalEnemies = 0;
 	global.enemiesAlive = (global.enemiesByStage + global.stage)
 	global.enemiesByStage = global.enemiesAlive;// começa com 7
-	global.endPhase = !global.endPhase;
-	global.paused = !global.paused
+	global.endPhase = false;
+	global.paused = false;
 	global.cardSortControl = false;
+	global.isShowingCards = false;
 	global.sortCount = 0;
 	
 	obj_menuManager.updateCardsMenu();

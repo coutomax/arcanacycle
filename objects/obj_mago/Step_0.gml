@@ -1,7 +1,13 @@
 /// @description
 
-//inputs
+if global.paused 
+{
+	xspd = 0;
+	yspd = 0;
+	exit
+}
 
+//inputs
 aPressed = keyboard_check( ord("A") );
 dPressed = keyboard_check( ord("D") );
 jumpKeyHold = keyboard_check( vk_space );
@@ -16,13 +22,6 @@ mouseClick = mouse_check_button( mb_left);
 
 //aplica gravidade ao yspd
 yspd += global.gravidade;
-
-if global.paused 
-{
-	xspd = 0;
-	yspd = 0;
-	exit
-}
 
 #region morrer
 	if global.vida <= 0
