@@ -1,3 +1,7 @@
++ Adicionar um efeito de flutuação nas bolhas - AGUARDANDO
++
++ Criar um sprite pra bolha explodindo - AGUARDANDO
++
 + Limitar as cartas para não se repetirem - AGUARDANDO
 +
 + Ajustar qual inimigo nasce e em qual estágio isso ocorre - AGUARDANDO

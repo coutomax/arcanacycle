@@ -4,6 +4,8 @@ if global.endPhase && global.isShowingCards
 	switch carta.id
 		{
 			case 0:
+				global.bubbles = true;
+				global.dano = 8;
 			break;
 			case 1:
 			break;
@@ -15,6 +17,9 @@ if global.endPhase && global.isShowingCards
 			case 3:
 			break;
 			case 4:
+				global.doubleProjectiles.active = true;
+				global.doubleProjectiles.count++;
+				global.doubleProjectiles.multiplier *= 2;
 			break;
 			case 5:
 			break;

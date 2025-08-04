@@ -35,17 +35,24 @@ yspd += global.gravidade;
 #region ataque
 	if mouseClick && attackCooldown.is_done()
 	{
-		
 		var dx = mouse_x - x;
 		var dy = mouse_y - y;
 		var dir = point_direction(x, y, mouse_x, mouse_y);
+		var spreadAngle = 30; // aumentar de 30 em 30;
 
-		var fireball = instance_create_layer(x, y, "Instances", obj_fireball);
+		for (var i = 0; i < global.doubleProjectiles.multiplier; i++)
+		{			
+			var atk = global.bubbles ? 
+			instance_create_layer(x, y, "Instances", obj_bubble)
+			: instance_create_layer(x, y, "Instances", obj_fireball);
 
-		fireball.direction = dir;
+			atk.direction = dir;
 
-		fireball.xspd = lengthdir_x(fireball.xspd * global.spdProjetilMultiplicador, dir);
-		fireball.yspd = lengthdir_y(fireball.yspd * global.spdProjetilMultiplicador, dir);
+			var angle = atk.direction - (spreadAngle * (global.doubleProjectiles.multiplier - 1) / 2) + (i * spreadAngle)
+
+			atk.xspd = lengthdir_x(atk.xspd * global.spdProjetilMultiplicador, dir);
+			atk.yspd = lengthdir_y(atk.yspd * global.spdProjetilMultiplicador, dir);
+		}
 		
 		attackCooldown.start();
 	}

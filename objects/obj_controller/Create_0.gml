@@ -26,7 +26,7 @@ global.cartas = [
 		id: 0,
 		name: "BOLHAS!!!",
 		sprite: spr_cardBubble_0,
-		description: "Seus feitiços viram bolhas!"
+		description: "Seus feitiços viram bolhas\nde ácido."
 	},
 	{
 		id: 1,
@@ -63,13 +63,13 @@ global.cartas = [
 
 #region variáveis globais
 	//lista de buffs
-	global.bubbles = false;
+	global.bubbles = true;
 	global.portals = false;
 	global.guided = false; // feitiço teleguiado
 	global.doubleProjectiles = {
 			active: false,
-			count: 0,
-			multiplier: 1
+			count: 0,  // número de cartas
+			multiplier: 1 // 2x a quantidade de projéteis que existem (max 10.)
 	};
 	global.healBuff = {
 			count: 0,
@@ -104,7 +104,7 @@ global.cartas = [
 	global.dmgMultiplicador = 1.0;
 	global.expMultiplicador = 1.0;
 
-	global.atkSpeed = .35;
+	global.atkSpeed = .6;
 	global.spdProjetilMultiplicador = 1.0;
 
 	//dados da fase
