@@ -4,7 +4,7 @@
 xspd = 8;
 yspd = 8;
 
-image_xscale = .35;
+image_xscale = .55;
 
 
 

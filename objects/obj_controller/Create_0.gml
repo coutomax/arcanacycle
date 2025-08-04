@@ -63,7 +63,7 @@ global.cartas = [
 
 #region variáveis globais
 	//lista de buffs
-	global.bubbles = true;
+	global.bubbles = false;
 	global.portals = false;
 	global.guided = false; // feitiço teleguiado
 	global.doubleProjectiles = {
