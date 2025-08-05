@@ -68,8 +68,9 @@ global.cartas = [
 	global.guided = false; // feitiço teleguiado
 	global.doubleProjectiles = {
 			active: false,
-			count: 0,  // número de cartas
-			multiplier: 1 // 2x a quantidade de projéteis que existem (max 10.)
+			count: 0, // número de cartas acumuladas
+			peso: 0,  // 0, 1, 2, 4, 8, 16... etc		
+			multiplier: 1 // 2x o peso (max 10.)
 	};
 	global.healBuff = {
 			count: 0,

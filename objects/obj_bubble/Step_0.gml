@@ -12,10 +12,11 @@ if global.paused exit;
 #endregion
 
 #region destroi a bolha quando passam 10 segundos
-	if destroyTimer >= destroyAfter
+	if destroyTimer.is_done()
 	{
 		instance_destroy();
 	}
+	destroyTimer.update();
 #endregion
 
 #region efeito de flutuação das bolhas
@@ -36,7 +37,6 @@ if global.paused exit;
 	{
 		tempoFlutuacao += velocidadeFlutuacao;
 		y = baseY + sin(tempoFlutuacao) * amplitude;
-		destroyTimer++;
 	}
 #endregion
 

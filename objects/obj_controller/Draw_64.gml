@@ -42,6 +42,8 @@ if debugger
 	draw_text(100, 125, "global.endPhase: "+ string(global.endPhase));
 	draw_text(100, 145, "global.paused: "+ string(global.paused));
 	draw_text(100, 165, "global.isShowingCards: "+ string(global.isShowingCards));
+	draw_text(100, 185, "global.doubleProjectiles.multiplier: "
+		+ string(global.doubleProjectiles.multiplier));
 	
 	
 	

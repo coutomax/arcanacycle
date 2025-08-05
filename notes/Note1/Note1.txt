@@ -1,3 +1,5 @@
++ Fazer uma lógica pra equilibrar o numero de bolhas quando tiver muitos projeteis
++
 + Adicionar um efeito de flutuação nas bolhas - AGUARDANDO
 +
 + Criar um sprite pra bolha explodindo - AGUARDANDO

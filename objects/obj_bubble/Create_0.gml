@@ -11,8 +11,8 @@ tempoFlutuacao = 0;
 flutuando = false;
 baseY = 0;
 
-destroyTimer = 0;
-destroyAfter = room_speed * 5;
+destroyTimer = timer( irandom_range(2, 4) );
+destroyTimer.start();
 
 xspd = 3;
 yspd = 3;

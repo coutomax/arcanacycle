@@ -19,6 +19,14 @@ if global.endPhase && global.isShowingCards
 			case 4:
 				global.doubleProjectiles.active = true;
 				global.doubleProjectiles.count++;
+				if global.doubleProjectiles.peso == 0
+				{
+					global.doubleProjectiles.peso += 1;
+				}
+				else
+				{
+					global.doubleProjectiles.peso *= 2;
+				}
 				global.doubleProjectiles.multiplier *= 2;
 			break;
 			case 5:
