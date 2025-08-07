@@ -12,9 +12,10 @@ if global.endPhase && global.isShowingCards
 			case 2:
 				global.lifeBuff.count++;
 				global.lifeBuff.multiplier += 0.2;
-				global.vidaMaxima = floor(100 * global.lifeBuff.multiplier);
+				global.vidaMaxima = floor(100 * global.lifeBuff.multiplier); // remove casas após a virgula
 			break;
 			case 3:
+				global.portals = true;
 			break;
 			case 4:
 				global.doubleProjectiles.active = true;

@@ -23,6 +23,12 @@ mouseClick = mouse_check_button( mb_left);
 //aplica gravidade ao yspd
 yspd += global.gravidade;
 
+#region teleport colision
+	
+	teleportColision(self, obj_portal);
+	
+#endregion
+
 #region morrer
 	if global.vida <= 0
 	{
@@ -133,7 +139,7 @@ yspd += global.gravidade;
 
 #region Movimento Geral
 	if (keyboard_check_pressed(ord("A"))) {
-		obj_mago.sprite_index = spr_magoAndandoEsq;
+		obj_player.sprite_index = spr_magoAndandoEsq;
 	}
 	
 	if aReleased || dReleased 
@@ -145,19 +151,19 @@ yspd += global.gravidade;
 	{
 		xspd = -2;
 		xColision = 0;
-		obj_mago.image_xscale = -2;
+		obj_player.image_xscale = -2;
 	}
 
 	if (keyboard_check_pressed(ord("D"))) 
 	{
-		obj_mago.sprite_index = spr_magoAndandoDir;
+		obj_player.sprite_index = spr_magoAndandoDir;
 	}
 
 	if dPressed && xColision != 1 
 	{
 		xspd = 2;
 		xColision = 0;
-		obj_mago.image_xscale = 2;
+		obj_player.image_xscale = 2;
 	}
 
 	if sPressed && !no_chao

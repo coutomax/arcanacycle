@@ -2,7 +2,7 @@
 
 if !global.paused
 {
-	obj_mago.sprite_index = spr_magoParadoDir
+	obj_player.sprite_index = spr_magoParadoDir
 }
 
 

@@ -3,12 +3,12 @@
 
 depth = 2;
 
-friccao = 0.98;
-velocidadeMinima = 0.1;
-amplitude = 6;
 velocidadeFlutuacao = 0.05;
+velocidadeMinima = 0.1;
 tempoFlutuacao = 0;
 flutuando = false;
+friccao = 0.98;
+amplitude = 6;
 baseY = 0;
 
 destroyTimer = timer( irandom_range(2, 4) );

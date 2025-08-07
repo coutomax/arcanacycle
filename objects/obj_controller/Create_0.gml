@@ -16,7 +16,14 @@ debugger = false;
 //Controle de geração de cartas: somente 1x por fase
 global.cardSortControl = false;
 global.isShowingCards = false;
+global.portalCount = 0;
 global.sortCount = 0;
+
+//Controle do tempo de duração dos portais
+global.isTeleportable = true;
+global.spawnPortalTimer = 8;
+global.hasPortal = false;
+spawnPortals = timer( global.spawnPortalTimer );
 
 instance_activate_object(obj_cardButton);
 
@@ -69,7 +76,7 @@ global.cartas = [
 	global.doubleProjectiles = {
 			active: false,
 			count: 0, // número de cartas acumuladas
-			peso: 0,  // 0, 1, 2, 4, 8, 16... etc		
+			peso: 0, // 0, 1, 2, 4, 8, 16... etc		
 			multiplier: 1 // 2x o peso (max 10.)
 	};
 	global.healBuff = {
@@ -96,8 +103,8 @@ global.cartas = [
 	global.luck = 30;
 	global.experience = 0;
 	global.level = 1;
-	global.nextLevel = 49; // 7 * 7 = 49
-	global.vida = 100;
+	global.nextLevel = 49;
+	global.vida = 10000;
 	global.vidaMaxima = 100;
 	global.dano = 5;
 

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"teleportColision",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"teleportColision",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

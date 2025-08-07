@@ -31,7 +31,7 @@ carta = {
 	{
 		with(obj_cardButton)
 		{
-			var sort = 4//irandom_range(0,5);
+			var sort = irandom_range(0,5);
 			carta = global.cartas[sort];
 			sprite_index = global.cartas[sort].sprite;
 		}		

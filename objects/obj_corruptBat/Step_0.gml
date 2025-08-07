@@ -3,7 +3,7 @@
 if global.paused exit;
 
 #region causa dano
-	damageColision(self, obj_mago) 	
+	damageColision(self, obj_player) 	
 #endregion
 
 #region morrer
@@ -53,8 +53,8 @@ if global.paused exit;
 #endregion
 
 #region segue o personagem
-	xTarget = obj_mago.x;
-	yTarget = obj_mago.y;
+	xTarget = obj_player.x;
+	yTarget = obj_player.y;
 
 	if vida > 0 
 	{

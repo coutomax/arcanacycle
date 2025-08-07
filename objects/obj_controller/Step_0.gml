@@ -51,7 +51,32 @@ if keyboard_check_released( ord("P") )
 	spawnTimer.update();
 #endregion
 
-
+#region controlador de portais
+if global.portals
+{
+	if !global.hasPortal
+	{
+		global.hasPortal = true;
+		spawnPortals.start();
+	}
+	
+	if spawnPortals.is_done() && global.portalCount == 0
+	{
+		var portalAX = irandom_range(0, 500);
+		var portalAY = irandom_range(560, 945);
+		var portalBX = irandom_range(550, 1000);
+		var portalBY = irandom_range(560, 945);
+		
+		portalA = instance_create_layer(portalAX, portalAY, "Instances", obj_portal);
+		portalA.tag = "portalA";
+		portalB = instance_create_layer(portalBX, portalBY, "Instances", obj_portal);
+		portalB.tag = "portalB";
+				
+		global.portalCount = 2;
+	}
+}
+spawnPortals.update();
+#endregion
 
 
 
