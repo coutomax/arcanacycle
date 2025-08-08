@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bloodAttack",
+  "%Name":"obj_projeteis",
   "eventList":[],
   "managed":true,
-  "name":"obj_bloodAttack",
+  "name":"obj_projeteis",
   "overriddenProperties":[],
   "parent":{
     "name":"attacks",
     "path":"folders/Objects/attacks.yy",
   },
-  "parentObjectId":{
-    "name":"obj_projeteis",
-    "path":"objects/obj_projeteis/obj_projeteis.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_blood_attack",
-    "path":"sprites/spr_blood_attack/spr_blood_attack.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

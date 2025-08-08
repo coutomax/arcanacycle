@@ -57,10 +57,6 @@ yspd += global.gravidade;
 				var atk = global.bubbles ? 
 				instance_create_layer(x, y, "Instances", obj_bubble)
 				: instance_create_layer(x, y, "Instances", obj_fireball);
-						
-				show_debug_message(dir);
-				show_debug_message("AJUSTE ----- " + string((dir - (i * spread)) + centralizador ));
-				show_debug_message("centralizador: " + string(centralizador));
 			
 				atk.xspd = lengthdir_x(atk.xspd * global.spdProjetilMultiplicador, (dir - (i * spread))  + centralizador);
 				atk.yspd = lengthdir_y(atk.yspd * global.spdProjetilMultiplicador, (dir - (i * spread))  + centralizador);
@@ -73,9 +69,8 @@ yspd += global.gravidade;
 			: instance_create_layer(x, y, "Instances", obj_fireball);
 	
 			atk.xspd = lengthdir_x(atk.xspd * global.spdProjetilMultiplicador, dir);
-			atk.yspd = lengthdir_y(atk.yspd * global.spdProjetilMultiplicador, dir);
+			atk.yspd = lengthdir_y(atk.yspd * global.spdProjetilMultiplicador, dir);	
 		}
-		
 		
 		attackCooldown.start();
 	}

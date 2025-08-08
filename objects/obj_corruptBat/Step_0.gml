@@ -31,7 +31,6 @@ if global.paused exit;
 		
 		for(var i = 0; i < array_length(drops); i++)
 		{
-			
 			var drop = drops[i];
 			
 			var finalChance = drop.chance + sorte;
@@ -43,13 +42,19 @@ if global.paused exit;
 				
 				instance_create_layer(dx, dy, "Instances", drop.obj);
 			}
-			
 		}
     }
 #endregion
 
 #region colisoes
 	groundColision(self, obj_chao);
+	
+	if no_chao
+	{
+		var deadBat = instance_create_layer(x, y, "Instances", obj_deadEnemie);
+		deadBat.sprite_index = spr_corruptBat_dead
+		instance_destroy();
+	}
 #endregion
 
 #region segue o personagem

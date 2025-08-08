@@ -72,12 +72,12 @@ global.cartas = [
 	//lista de buffs
 	global.bubbles = false;
 	global.portals = false;
-	global.guided = false; // feitiço teleguiado
+	global.guided = true; // feitiço teleguiado
 	global.doubleProjectiles = {
 			active: false,
 			count: 0, // número de cartas acumuladas
 			peso: 0, // 0, 1, 2, 4, 8, 16... etc		
-			multiplier: 1 // 2x o peso (max 10.)
+			multiplier: 1 // 2x o peso (max 5.)
 	};
 	global.healBuff = {
 			count: 0,
@@ -104,7 +104,7 @@ global.cartas = [
 	global.experience = 0;
 	global.level = 1;
 	global.nextLevel = 49;
-	global.vida = 10000;
+	global.vida = 100;
 	global.vidaMaxima = 100;
 	global.dano = 5;
 

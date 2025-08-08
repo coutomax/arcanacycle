@@ -15,19 +15,3 @@ if global.paused exit;
 	x += xspd;
 	y += yspd;
 #endregion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
