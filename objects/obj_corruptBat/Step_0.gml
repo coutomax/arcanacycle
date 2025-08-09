@@ -48,13 +48,6 @@ if global.paused exit;
 
 #region colisoes
 	groundColision(self, obj_chao);
-	
-	if no_chao
-	{
-		var deadBat = instance_create_layer(x, y, "Instances", obj_deadEnemie);
-		deadBat.sprite_index = spr_corruptBat_dead
-		instance_destroy();
-	}
 #endregion
 
 #region segue o personagem
