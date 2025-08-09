@@ -46,6 +46,7 @@
     {"name":"obj_projeteis","order":3,"path":"objects/obj_projeteis/obj_projeteis.yy",},
     {"name":"RoomUI","order":16,"path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"damageColision","order":6,"path":"scripts/damageColision/damageColision.yy",},
+    {"name":"inicializar","order":9,"path":"scripts/inicializar/inicializar.yy",},
     {"name":"mobColision","order":5,"path":"scripts/mobColision/mobColision.yy",},
     {"name":"objectDestroyer","order":3,"path":"scripts/objectDestroyer/objectDestroyer.yy",},
     {"name":"platformColision","order":1,"path":"scripts/platformColision/platformColision.yy",},
