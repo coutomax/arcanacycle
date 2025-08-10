@@ -7,14 +7,9 @@
 if global.paused exit;
 
 #region colisao do projetil
-	playerAttackColision(self, obj_corruptBat);
+	playerAttackColision(self, obj_enemie);
 #endregion
 
 #region destroi o projetil quando sai da tela
 	objectDestroyer(self);
-#endregion
-
-#region move o projétil
-	x += xspd;
-	y += yspd;
 #endregion
