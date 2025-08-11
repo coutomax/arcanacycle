@@ -34,6 +34,7 @@ event_inherited();
 #endregion
 
 #region move o projétil	
+
 	xspd *= friccao;
 	yspd *= friccao;
 	

@@ -44,9 +44,11 @@ yspd += global.gravidade;
 		var dx = mouse_x - x;
 		var dy = mouse_y - y;
 		var dir = point_direction(x, y, mouse_x, mouse_y);
-		var spread = 5 // aumentar de 30 em 30;
+		var spread = 5;
 		var centralizador = global.doubleProjectiles.peso == 0 ?
 			0 : 7.5 + ((global.doubleProjectiles.peso - 1) * 5);
+			
+		var atk = noone;
 		
 		if global.doubleProjectiles.peso > 0
 		{
@@ -54,22 +56,31 @@ yspd += global.gravidade;
 			// 7 de peso centralizou 2 projeteis
 			for (var i = 1; i <= global.doubleProjectiles.multiplier; i++)
 			{				
-				var atk = global.bubbles ? 
+				atk = global.bubbles ? 
 				instance_create_layer(x, y, "Instances", obj_bubble)
 				: instance_create_layer(x, y, "Instances", obj_fireball);
 			
-				atk.xspd = lengthdir_x(atk.xspd * global.spdProjetilMultiplicador, (dir - (i * spread))  + centralizador);
-				atk.yspd = lengthdir_y(atk.yspd * global.spdProjetilMultiplicador, (dir - (i * spread))  + centralizador);
+				dir = (dir - (i * spread))  + centralizador
 			}
 		}
 		else
 		{
-			var atk = global.bubbles ? 
+			atk = global.bubbles ? 
 			instance_create_layer(x, y, "Instances", obj_bubble)
 			: instance_create_layer(x, y, "Instances", obj_fireball);
-	
+		}
+		
+		atk.direction = dir;
+		
+		if global.bubbles
+		{
 			atk.xspd = lengthdir_x(atk.xspd * global.spdProjetilMultiplicador, dir);
-			atk.yspd = lengthdir_y(atk.yspd * global.spdProjetilMultiplicador, dir);	
+			atk.yspd = lengthdir_y(atk.yspd * global.spdProjetilMultiplicador, dir);
+		}
+		else
+		{
+			atk.image_angle = dir;
+			atk.speed = atk.spd;
 		}
 		
 		attackCooldown.start();

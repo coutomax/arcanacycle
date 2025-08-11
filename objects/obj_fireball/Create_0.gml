@@ -4,4 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-target = instance_nearest(x, y, obj_enemy);
+
+spd = 8 * global.spdProjetilMultiplicador;
+turnSpeed = 1.2;

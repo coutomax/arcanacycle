@@ -14,6 +14,8 @@ baseY = 0;
 destroyTimer = timer( irandom_range(2, 4) );
 destroyTimer.start();
 
+spd = 3;
+
 xspd = 3;
 yspd = 3;
 

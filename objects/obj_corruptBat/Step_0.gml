@@ -8,6 +8,5 @@ if !vivo && no_chao
 {
 	var deadEnemy = instance_create_layer(x, y, "Instances", obj_deadEnemy);
 	deadEnemy.sprite_index = spr_corruptBat_dead;
-		
-	instance_destroy();
+	deadEnemy.enemyId = id;
 }
