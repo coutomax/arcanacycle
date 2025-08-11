@@ -36,7 +36,8 @@
   "ResourceOrderSettings":[
     {"name":"obj_bubble","order":2,"path":"objects/obj_bubble/obj_bubble.yy",},
     {"name":"obj_closeButton","order":1,"path":"objects/obj_closeButton/obj_closeButton.yy",},
-    {"name":"obj_enemie","order":1,"path":"objects/obj_enemie/obj_enemie.yy",},
+    {"name":"obj_deadEnemy","order":2,"path":"objects/obj_deadEnemy/obj_deadEnemy.yy",},
+    {"name":"obj_enemy","order":1,"path":"objects/obj_enemy/obj_enemy.yy",},
     {"name":"obj_fireball","order":1,"path":"objects/obj_fireball/obj_fireball.yy",},
     {"name":"obj_menuManager","order":1,"path":"objects/obj_menuManager/obj_menuManager.yy",},
     {"name":"obj_parede","order":1,"path":"objects/obj_parede/obj_parede.yy",},

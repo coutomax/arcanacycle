@@ -4,7 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-#region move o projétil // segue o inimigo
-	x += xspd;
-	y += yspd;
-#endregion
+target = instance_nearest(x, y, obj_enemy);

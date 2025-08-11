@@ -6,7 +6,7 @@ vivo = true;
 
 experiencia = 7;
 
-attackCooldown = timer ( 2 )
+attackCooldown = timer ( 2 );
 
 //começa voando, então é false
 no_chao = false;
