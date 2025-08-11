@@ -2,15 +2,13 @@
 
 yspd += global.gravidade;
 
-//ground colisions
-#region
+#region colisão com o chão
 	groundColision(self, obj_chao);
 	
 	platformColision(self, obj_plataforma);
 #endregion
 
-//movimento e gravidade
-#region
+#region movimento e gravidade
 y += yspd;
 #endregion
 

@@ -9,7 +9,10 @@
     "name":"attacks",
     "path":"folders/Objects/attacks.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_projeteis",
+    "path":"objects/obj_projeteis/obj_projeteis.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

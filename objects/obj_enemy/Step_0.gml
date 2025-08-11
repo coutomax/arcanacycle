@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 /// @description 
 
 if global.paused exit;
 
-//causa dano
-#region
+#region causa dano
 	damageColision(self, obj_player) 	
 #endregion
 
-//morrer
-#region
+#region morrer
 
 	if !vivo
 	{
@@ -34,7 +31,6 @@ if global.paused exit;
 		
 		for(var i = 0; i < array_length(drops); i++)
 		{
-			
 			var drop = drops[i];
 			
 			var finalChance = drop.chance + sorte;
@@ -46,18 +42,15 @@ if global.paused exit;
 				
 				instance_create_layer(dx, dy, "Instances", drop.obj);
 			}
-			
 		}
     }
 #endregion
 
-//colisoes
-#region
+#region colisoes
 	groundColision(self, obj_chao);
 #endregion
 
-//segue o personagem
-#region
+#region segue o personagem
 	xTarget = obj_player.x;
 	yTarget = obj_player.y;
 
@@ -84,17 +77,5 @@ if global.paused exit;
 
 
 
-=======
-/// @description Insert description here
-// You can write your code in this editor
->>>>>>> teste
 
-// Inherit the parent event
-event_inherited();
 
-if !vivo && no_chao
-{
-	var deadEnemy = instance_create_layer(x, y, "Instances", obj_deadEnemy);
-	deadEnemy.sprite_index = spr_corruptBat_dead;
-	deadEnemy.enemyId = id;
-}

@@ -1,7 +1,10 @@
-/// @description Realiza a geração de cartas
+/// @description Insert description here
+// You can write your code in this editor
 
-if global.isSorting && !localSortControl
+image_alpha = 1;
+
+if global.cardSortControl && global.sortCount < 3
 {
-	localSortControl = true;
 	cardSort();
+	global.sortCount++;
 }

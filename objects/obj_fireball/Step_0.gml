@@ -1,36 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if global.paused exit;
+// Inherit the parent event
+event_inherited();
 
-//colisao do projetil
-#region
-	playerAttackColision(self, obj_corruptBat);
-#endregion
+//direction += turnSpeed * sign(angle_difference(point_direction(x, y, tx, ty), direction));
+//image_angle = direction;
 
-//destroi o projetil quando sai da tela
-#region
-	objectDestroyer(self);
-#endregion
-
-//move o projétil
-#region
+#region move o projétil // segue o inimigo
 	x += xspd;
-	y += yspd;
+		y += yspd;
 #endregion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

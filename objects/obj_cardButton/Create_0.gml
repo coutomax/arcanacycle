@@ -1,9 +1,6 @@
 /// @description card definitions
 
-localSortControl = false;
-
-//Manipulação do texto na interface
-#region
+#region Manipulação do texto na interface
 	nodeCard = layer_get_flexpanel_node("CardsMenu");
 	childCard = flexpanel_node_get_child(nodeCard, "CardPlace_" + string(idCardButton));
 
@@ -22,55 +19,21 @@ localSortControl = false;
 	textElementIdName = textStructureName.layerElements[0].elementId;	
 #endregion
 
-//cria as propriedades das cartas
-#region
-cartas = [
-	{	
-		id: 0,
-		name: "BOLHAS!!!",
-		sprite: spr_cardBubble_0,
-		description: "Seus feitiços viram bolhas!"
-	},
+carta = {
+	id: -1,
+	name: "Null",
+	sprite: spr_blankCard,
+	description: "Null"
+};
+	
+#region gera uma carta para o objeto na rodada onde foi criado
+	cardSort = function() 
 	{
-		id: 1,
-		name: "Fragmentado",
-		sprite: spr_cardDebris_1,
-		description: "Inimigos criam destroços\nao morrer."
-	},
-	{
-		id: 2,
-		name: "Saúde é tudo",
-		sprite: spr_cardLife_2,
-		description: "+20% da vida máxima."
-	},
-	{
-		id: 3,
-		name: "Chamou um Uber?",
-		sprite: spr_cardPortals_3,
-		description: "Portais se abrem a cada\noito segundos."
-	},
-	{
-		id: 4,
-		name: "2 coelhos,\n1 caixa d'água",
-		sprite: spr_cardProjectiles_4,
-		description: "Dispara mais um feitiço."
-	},
-	{
-		id: 5,
-		name: "Na mira!",
-		sprite: spr_cardScope_5,
-		description: "Feitiços seguirão os alvos."
+		with(obj_cardButton)
+		{
+			var sort = irandom_range(0,5);
+			carta = global.cartas[sort];
+			sprite_index = global.cartas[sort].sprite;
+		}		
 	}
-];
 #endregion
-
-//gera uma carta para o objeto na rodada onde foi criado
-//#region
-//	cardSort = function() 
-//	{
-//		var sort = irandom_range(0,5);
-//		show_debug_message("SORT CARD: "+ string(sort));
-//		carta = cartas[sort];
-//		sprite_index = cartas[sort].sprite;
-//	}
-//#endregion

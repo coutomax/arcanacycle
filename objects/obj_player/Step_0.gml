@@ -1,7 +1,13 @@
 /// @description
 
-//inputs
+if global.paused 
+{
+	xspd = 0;
+	yspd = 0;
+	exit
+}
 
+//inputs
 aPressed = keyboard_check( ord("A") );
 dPressed = keyboard_check( ord("D") );
 jumpKeyHold = keyboard_check( vk_space );
@@ -17,15 +23,13 @@ mouseClick = mouse_check_button( mb_left);
 //aplica gravidade ao yspd
 yspd += global.gravidade;
 
-if global.paused 
-{
-	xspd = 0;
-	yspd = 0;
-	exit
-}
+#region teleport colision
+	
+	teleportColision(self, obj_portal);
+	
+#endregion
 
-//morrer
-#region
+#region morrer
 	if global.vida <= 0
 	{
 		global.vida = 0;
@@ -34,21 +38,39 @@ if global.paused
 	}
 #endregion
 
-//ataque
-#region
+#region ataque
 	if mouseClick && attackCooldown.is_done()
 	{
-		
-		var dx = mouse_x - x;
-		var dy = mouse_y - y;
 		var dir = point_direction(x, y, mouse_x, mouse_y);
-
-		var fireball = instance_create_layer(x, y, "Instances", obj_fireball);
-
-		fireball.direction = dir;
-
-		fireball.xspd = lengthdir_x(fireball.xspd * global.spdProjetilMultiplicador, dir);
-		fireball.yspd = lengthdir_y(fireball.yspd * global.spdProjetilMultiplicador, dir);
+		var spread = 5
+		var centralizador = global.doubleProjectiles.peso == 0 ?
+			0 : 7.5 + ((global.doubleProjectiles.peso - 1) * 5);
+		
+		if global.doubleProjectiles.peso > 0
+		{
+			//12.5 de peso centralizou 4 projéteis
+			// 7 de peso centralizou 2 projeteis
+			for (var i = 1; i <= global.doubleProjectiles.multiplier; i++)
+			{				
+				var atk = global.bubbles ? 
+				instance_create_layer(x, y, "Instances", obj_bubble)
+				: instance_create_layer(x, y, "Instances", obj_fireball);
+			
+				var ajuste = (dir - (i * spread))  + centralizador
+			
+				atk.xspd = lengthdir_x(atk.xspd * global.spdProjetilMultiplicador, ajuste);
+				atk.yspd = lengthdir_y(atk.yspd * global.spdProjetilMultiplicador, ajuste);
+			}
+		}
+		else
+		{
+			var atk = global.bubbles ? 
+			instance_create_layer(x, y, "Instances", obj_bubble)
+			: instance_create_layer(x, y, "Instances", obj_fireball);
+	
+			atk.xspd = lengthdir_x(atk.xspd * global.spdProjetilMultiplicador, dir);
+			atk.yspd = lengthdir_y(atk.yspd * global.spdProjetilMultiplicador, dir);	
+		}
 		
 		attackCooldown.start();
 	}
@@ -56,8 +78,7 @@ if global.paused
 	attackCooldown.update();
 #endregion
 
-//pulo
-#region
+#region pulo
 	if place_meeting(x, y + 1, obj_chao) || place_meeting(x, y + 1, obj_plataforma) 
 	
 	{
@@ -91,8 +112,7 @@ if global.paused
 	if yspd > global.maxGravidade { yspd = global.maxGravidade; }
 #endregion
 
-//colisions
-#region
+#region colisões
 	// x colision - parede
 	if place_meeting(x + xspd, y, obj_parede)
 	{
@@ -101,7 +121,6 @@ if global.paused
 		{
 			x += _pixelCheck;
 		}
-		show_debug_message("colidiu na parede"+ string(x));
 		xColision = _pixelCheck;
 		xspd = 0;
 	}
@@ -113,8 +132,7 @@ if global.paused
 	platformColision(self, obj_plataforma)
 #endregion
 
-// Movimento Geral
-#region
+#region Movimento Geral
 	if (keyboard_check_pressed(ord("A"))) {
 		obj_player.sprite_index = spr_magoAndandoEsq;
 	}
@@ -149,9 +167,8 @@ if global.paused
 		yspd = 2;
 	}
 #endregion
-
-// Aplicar velocidade
-#region
+ 
+#region Aplicar velocidade
 	x += xspd;
 	y += yspd;
 #endregion
