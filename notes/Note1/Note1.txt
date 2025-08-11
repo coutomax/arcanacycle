@@ -1,4 +1,7 @@
-+ Fazer uma lógica pra equilibrar o numero de bolhas quando tiver muitos projeteis
++ Ajustar ou refazer a queda dos inimigos mortos no chão. Como está agora as vezes
++ buga e eles ficam flutuando
++
++Fazer uma lógica pra equilibrar o numero de bolhas quando tiver muitos projeteis
 +
 + Adicionar um efeito de flutuação nas bolhas - AGUARDANDO
 +

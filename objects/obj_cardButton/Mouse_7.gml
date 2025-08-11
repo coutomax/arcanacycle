@@ -31,6 +31,7 @@ if global.endPhase && global.isShowingCards
 				global.doubleProjectiles.multiplier *= 2;
 			break;
 			case 5:
+				global.guided = true;
 			break;
 			case 6: // buff de cura (ainda não foi criado)
 				global.healBuff.count++;

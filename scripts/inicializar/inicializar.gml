@@ -113,7 +113,7 @@ global.cartas = [
 		id: 5,
 		name: "Na mira!",
 		sprite: spr_cardScope_5,
-		description: "Feitiços seguirão os alvos."
+		description: "Feitiços seguirão os alvos próximos."
 	}
 ];
 #endregion

@@ -60,6 +60,7 @@ yspd += global.gravidade;
 			
 				atk.xspd = lengthdir_x(atk.xspd * global.spdProjetilMultiplicador, ajuste);
 				atk.yspd = lengthdir_y(atk.yspd * global.spdProjetilMultiplicador, ajuste);
+				atk.direction = ajuste;
 			}
 		}
 		else
@@ -69,7 +70,8 @@ yspd += global.gravidade;
 			: instance_create_layer(x, y, "Instances", obj_fireball);
 	
 			atk.xspd = lengthdir_x(atk.xspd * global.spdProjetilMultiplicador, dir);
-			atk.yspd = lengthdir_y(atk.yspd * global.spdProjetilMultiplicador, dir);	
+			atk.yspd = lengthdir_y(atk.yspd * global.spdProjetilMultiplicador, dir);
+			atk.direction = dir;
 		}
 		
 		attackCooldown.start();
