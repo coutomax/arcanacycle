@@ -8,19 +8,6 @@ event_inherited();
 //image_angle = direction;
 
 #region move o projétil // segue o inimigo
-	var target = instance_nearest(x, y, obj_enemy);
-
-	if target != noone && instance_exists(target)
-	{
-		var tx = target.x;
-		var ty = target.y;
-		
-		
-		
-	} 
-	
-	if !instance_exists(target) || target == noone
-	{
-		speed = spd;
-	}
+	x += xspd;
+		y += yspd;
 #endregion

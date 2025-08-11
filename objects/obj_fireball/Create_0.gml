@@ -3,7 +3,3 @@
 
 // Inherit the parent event
 event_inherited();
-
-
-spd = 8 * global.spdProjetilMultiplicador;
-turnSpeed = 1.2;

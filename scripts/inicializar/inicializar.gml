@@ -19,7 +19,7 @@ global.hasPortal = false;
 	//lista de buffs
 	global.bubbles = false;
 	global.portals = false;
-	global.guided = true; // feitiço teleguiado
+	global.guided = false; // feitiço teleguiado
 	global.doubleProjectiles = {
 			active: false,
 			count: 0, // número de cartas acumuladas
