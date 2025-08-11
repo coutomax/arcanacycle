@@ -8,4 +8,5 @@ if durationTimer.is_done()
 	global.hasPortal = false;
 	global.isTeleportable = true;
 }
+
 durationTimer.update();
