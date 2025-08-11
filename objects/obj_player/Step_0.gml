@@ -24,9 +24,7 @@ mouseClick = mouse_check_button( mb_left);
 yspd += global.gravidade;
 
 #region teleport colision
-	
 	teleportColision(self, obj_portal);
-	
 #endregion
 
 #region morrer

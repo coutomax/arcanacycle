@@ -37,8 +37,9 @@ global.hasPortal = false;
 	};
 	global.debris = {
 			active: false,
-			count: 0, //pra cada um a mais, 2 projéteis serão adicionados.
-			debris: 0
+			count: 0, // número de cartas acumuladas
+			peso: 0, // 0, 1, 2, 4, 8, 16... etc		
+			multiplier: 1 // 2x o peso (max 5.)
 	};
 
 	//fisica

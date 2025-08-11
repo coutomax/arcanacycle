@@ -8,6 +8,17 @@ if global.endPhase && global.isShowingCards
 				global.dano = 8;
 			break;
 			case 1:
+				global.debris.active = true;
+				global.debris.count++;
+				if global.debris.peso == 0
+				{
+					global.debris.peso += 1;
+				}
+				else
+				{
+					global.debris.peso *= 2;
+				}
+					global.debris.multiplier *= 2;
 			break;
 			case 2:
 				global.lifeBuff.count++;

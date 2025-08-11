@@ -1,5 +1,7 @@
 depth = 2;
 
+isDebrisAvailable = true;
+
 vida = 25;
 dano = 15;
 vivo = true;

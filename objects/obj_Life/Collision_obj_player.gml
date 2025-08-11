@@ -1,7 +1,7 @@
 /// @description Jogador pegou a vida
 
 #region exibe a cura na tela
-	var dt = instance_create_layer(x, y - 20, "Instances", obj_damage_text);
+	var dt = instance_create_layer(x, y - 20, "Effects", obj_damage_text);
 	dt.cor = c_green;
 
 	if global.vidaMaxima - global.vida >= global.totalHeal

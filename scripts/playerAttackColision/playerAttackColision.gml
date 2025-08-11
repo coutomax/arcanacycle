@@ -11,7 +11,7 @@ function playerAttackColision(_inst, target){
                 if targetInst.vida > 0
                 {
                     targetInst.vida -= global.dano;
-					var dt = instance_create_layer(x, y - 20, "Instances", obj_damage_text);
+					var dt = instance_create_layer(x, y - 20, "Effects", obj_damage_text);
 					dt.cor = c_red;
 					dt.texto = string(global.dano);
 					

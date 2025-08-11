@@ -13,7 +13,7 @@ function damageColision(_inst, attacker){
 					{
 						global.vida -= _inst.dano;
 						
-						var dt = instance_create_layer(_inst.x, _inst.y - 20, "Instances", obj_damage_text);
+						var dt = instance_create_layer(_inst.x, _inst.y - 20, "Effects", obj_damage_text);
 						dt.cor = c_red;
 						dt.texto = string(_inst.dano);
 						

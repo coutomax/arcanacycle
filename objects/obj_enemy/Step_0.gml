@@ -3,11 +3,10 @@
 if global.paused exit;
 
 #region causa dano
-	damageColision(self, obj_player) 	
+	damageColision(self, obj_player);
 #endregion
 
 #region morrer
-
 	if !vivo
 	{
 		sprite_index = spr_corruptBat_dead;
@@ -15,6 +14,18 @@ if global.paused exit;
 		y += yspd;
         yspd += global.gravidade;	
 		image_angle = 0;
+		
+		if global.debris.active && isDebrisAvailable
+		{
+			isDebrisAvailable = false;
+			if global.debris.peso > 0 
+			{
+				for (var i = 1; i < global.debris.multiplier; i++)
+				{
+					var debris = instance_create_layer(x, y, "Instances", obj_debris);				
+				}
+			}
+		}
 	}
 
     if vida <= 0 && vivo
@@ -59,7 +70,8 @@ if global.paused exit;
 		var dir = point_direction(x, y, xTarget, yTarget);
 
 		mp_potential_step(xTarget, yTarget, totalSpeed, false);
-
+		
+		direction = dir;
 		image_angle = dir - 270;
 	}
 #endregion
