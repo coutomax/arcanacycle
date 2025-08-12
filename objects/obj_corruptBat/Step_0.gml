@@ -4,9 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
-if !vivo && no_chao
-{
+if !vivo
+{	
 	var deadEnemy = instance_create_layer(x, y, "Instances", obj_deadEnemy);
-	deadEnemy.sprite_index = spr_corruptBat_dead;
-	deadEnemy.enemyId = id;
+	deadEnemy.deadEnemy = global.deadEnemies[0];
+	instance_destroy();
 }

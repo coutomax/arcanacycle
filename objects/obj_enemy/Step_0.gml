@@ -14,18 +14,6 @@ if global.paused exit;
 		y += yspd;
         yspd += global.gravidade;	
 		image_angle = 0;
-		
-		if global.debris.active && isDebrisAvailable
-		{
-			isDebrisAvailable = false;
-			if global.debris.peso > 0 
-			{
-				for (var i = 1; i <= global.debris.multiplier; i++)
-				{
-					var debris = instance_create_layer(x, y, "Instances", obj_debris);				
-				}
-			}
-		}
 	}
 
     if vida <= 0 && vivo
@@ -57,7 +45,7 @@ if global.paused exit;
     }
 #endregion
 
-#region colisoes
+#region colisão com o chão
 	groundColision(self, obj_chao);
 #endregion
 

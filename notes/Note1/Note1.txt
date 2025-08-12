@@ -1,3 +1,6 @@
++ Spawnar o obj_deadEnemy antes do morcego morto começar a cair, e fazer essa queda nele
++ Assim, os projeteis vão mais cedo pro próximo inimigo e ele deixa de cair bugado
++
 +  ################################################################################
 + Ajustar ou refazer a queda dos inimigos mortos no chão. Como está agora as vezes
 + buga e eles ficam flutuando - AGUARDANDO
