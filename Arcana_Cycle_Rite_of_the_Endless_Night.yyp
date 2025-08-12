@@ -102,6 +102,8 @@
     {"id":{"name":"spr_closeButton","path":"sprites/spr_closeButton/spr_closeButton.yy",},},
     {"id":{"name":"spr_corruptBat_dead","path":"sprites/spr_corruptBat_dead/spr_corruptBat_dead.yy",},},
     {"id":{"name":"spr_corruptBat","path":"sprites/spr_corruptBat/spr_corruptBat.yy",},},
+    {"id":{"name":"spr_corruptDebris","path":"sprites/spr_corruptDebris/spr_corruptDebris.yy",},},
+    {"id":{"name":"spr_debris","path":"sprites/spr_debris/spr_debris.yy",},},
     {"id":{"name":"spr_hpBar","path":"sprites/spr_hpBar/spr_hpBar.yy",},},
     {"id":{"name":"spr_hpPreenchimento","path":"sprites/spr_hpPreenchimento/spr_hpPreenchimento.yy",},},
     {"id":{"name":"spr_life","path":"sprites/spr_life/spr_life.yy",},},

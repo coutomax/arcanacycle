@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_projetil",
-    "path":"sprites/spr_projetil/spr_projetil.yy",
+    "name":"spr_corruptDebris",
+    "path":"sprites/spr_corruptDebris/spr_corruptDebris.yy",
   },
   "spriteMaskId":null,
   "visible":true,

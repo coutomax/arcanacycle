@@ -3,7 +3,9 @@
 
 if global.paused { exit; }
 
-event_inherited();
+#region colisao do projetil
+	playerAttackColision(self, obj_enemy);
+#endregion
 
 #region Causa dano no player também
 	damageColision(self, obj_player);

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-image_xscale = .55;
+image_xscale = .75;
 
 xspd = irandom_range(-5, 5);
 yspd = irandom_range(-7, -3);

@@ -66,6 +66,8 @@
     {"name":"spr_cardScope_5","order":5,"path":"sprites/spr_cardScope_5/spr_cardScope_5.yy",},
     {"name":"spr_closeButton","order":2,"path":"sprites/spr_closeButton/spr_closeButton.yy",},
     {"name":"spr_corruptBat_dead","order":1,"path":"sprites/spr_corruptBat_dead/spr_corruptBat_dead.yy",},
+    {"name":"spr_corruptDebris","order":4,"path":"sprites/spr_corruptDebris/spr_corruptDebris.yy",},
+    {"name":"spr_debris","order":3,"path":"sprites/spr_debris/spr_debris.yy",},
     {"name":"spr_hpPreenchimento","order":1,"path":"sprites/spr_hpPreenchimento/spr_hpPreenchimento.yy",},
     {"name":"spr_magoAndandoEsq","order":1,"path":"sprites/spr_magoAndandoEsq/spr_magoAndandoEsq.yy",},
     {"name":"spr_magoParadoDir","order":2,"path":"sprites/spr_magoParadoDir/spr_magoParadoDir.yy",},

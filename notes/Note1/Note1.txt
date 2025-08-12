@@ -1,7 +1,11 @@
++  ################################################################################
 + Ajustar ou refazer a queda dos inimigos mortos no chão. Como está agora as vezes
-+ buga e eles ficam flutuando
++ buga e eles ficam flutuando - AGUARDANDO
++  ################################################################################
 +
-+Fazer uma lógica pra equilibrar o numero de bolhas quando tiver muitos projeteis
++ Fazer uma lógica pra equilibrar o numero de bolhas quando tiver muitos projeteis
++
++ Ajustar pra destruir o destroço quando bater no player também - ou não ser destruído no inimigo - OK
 +
 + Adicionar um efeito de flutuação nas bolhas - AGUARDANDO
 +

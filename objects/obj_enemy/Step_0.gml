@@ -20,7 +20,7 @@ if global.paused exit;
 			isDebrisAvailable = false;
 			if global.debris.peso > 0 
 			{
-				for (var i = 1; i < global.debris.multiplier; i++)
+				for (var i = 1; i <= global.debris.multiplier; i++)
 				{
 					var debris = instance_create_layer(x, y, "Instances", obj_debris);				
 				}
